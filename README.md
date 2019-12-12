@@ -45,26 +45,30 @@ Remix is a online IDE which can be used to write , compile and deploy smart cont
    Solidity compiler
    Deploy & run transactions
    Debugger
+   Solidity static analysis
+   
 3. Open the File Explorer and create a new file `SimpleStorage`  
+
 4. Paste below Smart Contracts inside `SimpleStorage.sol`
     
   ```
-pragma solidity ^0.5.12;
-contract SimpleStore {
+        pragma solidity ^0.5.12;
+        contract SimpleStore {
 
-  string value;
-  event NewValueAssigned(string value);
-  
-  function set(string memory _value) public {
-    value = _value;
-    emit NewValueAssigned(_value);
-  }
+          string value;
+          event NewValueAssigned(string value);
 
-  function get()  public view returns (string memory) {
-    return value;
-  }
-}
+          function set(string memory _value) public {
+            value = _value;
+            emit NewValueAssigned(_value);
+          }
+
+          function get()  public view returns (string memory) {
+            return value;
+          }
+        }
 ```
+5. 
   
 
 
