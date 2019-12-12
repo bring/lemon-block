@@ -12,7 +12,7 @@ This is basic smart contract interaction client developed in React.
     npm install -g ganache-cli
     ganache-cli
     
-  More configuration option can be found over [here] (https://docs.nethereum.com/en/latest/ethereum-and-clients/ganache-cli/)
+  More configuration option can be found [here](https://docs.nethereum.com/en/latest/ethereum-and-clients/ganache-cli/)
       
       
     
