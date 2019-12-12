@@ -73,11 +73,11 @@ Remix is a online IDE which can be used to write , compile and deploy smart cont
   
   After adding the plugin , it will look something like this 
   
-  ![Alt Text] (https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.41.58.png)
+  ![Alt Text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.41.58.png)
    
 3. Open the File Explorer and create a new file `SimpleStorage`  
 
-
+![Alt Text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.43.51.png)
 
 4. Paste below Smart Contracts inside `SimpleStorage.sol`
     
@@ -99,9 +99,14 @@ Remix is a online IDE which can be used to write , compile and deploy smart cont
         }
 ```
 5.  Doing `cmd + s ` in the editor will save the smart contract and compile it. 
+
+![ALt Text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.45.14.png)
+
 Alternatively you can navigate to the second tab `SOLIDITY COMPILER` on the left panel to compile the contract. Make sure you choose the right compiler version based the the `pragma solidity` version defined in the smart contract. 
 
-For this example it is `0.5.12`.  Copy the abi code of the contract by clicking on `ABI` option at the bottom of the panel and paste it in  https://github.com/bring/ethbasiccontract/blob/master/src/Contracts/SimpleStorage.json
+For this example it is `0.5.12`.  Copy the abi code of the contract by clicking on `ABI` option at the bottom of the panel and paste it in  [SimpleStorage.json](https://github.com/bring/ethbasiccontract/blob/master/src/Contracts/SimpleStorage.json) present in the repository under `src\Contacts\` path
+
+![Alt Text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.46.27.png)
 
 6. Navigate to third tab (`DEPLOY & RUN TRANSACTIONS`) in the left panel.
 
@@ -109,9 +114,14 @@ Select `Web3 Provider` option from the environment dropdown. A modal will show u
 
 You can start seeing the default accounts given by Ganache. 
 
+![Alt text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.49.29.png)
+
+
 7. Click on `Deploy` to publish the smart contract in the block chain. You can see the deployed contracts at the bottom of the same panel. It is also possible to copy the contract address from the deployed contracts. 
 
 Copy the contract address and configure it in https://github.com/bring/ethbasiccontract/blob/master/src/Contants.js 
+
+![Alt text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.52.17.png)
 
 More information on Remix can be found [here](https://remix-ide.readthedocs.io/)
 
