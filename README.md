@@ -61,8 +61,8 @@ After installation you will need configure , the test accounts in the wallet .
 Remix is a online IDE which can be used to write , compile and deploy smart contracts. It will also  provides option to execute smart contract methods from the online IDE
 
 
-1. Open https://remix.ethereum.org/ in browser 
-2. Activate  below plugin's in the IDE
+**1.** Open https://remix.ethereum.org/ in browser 
+**2.** Activate  below plugin's in the IDE
    
   - Solidity compiler
   - Deploy & run transactions
@@ -75,11 +75,11 @@ Remix is a online IDE which can be used to write , compile and deploy smart cont
   
   ![Alt Text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.41.58.png)
    
-3. Open the File Explorer and create a new file `SimpleStorage`  
+**3.** Open the File Explorer and create a new file `SimpleStorage`  
 
 ![Alt Text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.43.51.png)
 
-4. Paste below Smart Contracts inside `SimpleStorage.sol`
+**4.** Paste below Smart Contracts inside `SimpleStorage.sol`
     
   ```
         pragma solidity ^0.5.12;
@@ -98,7 +98,7 @@ Remix is a online IDE which can be used to write , compile and deploy smart cont
           }
         }
 ```
-5.  Doing `cmd + s ` in the editor will save the smart contract and compile it. 
+**5. ** Doing `cmd + s ` in the editor will save the smart contract and compile it. 
 
 ![ALt Text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.45.14.png)
 
@@ -108,7 +108,7 @@ For this example it is `0.5.12`.  Copy the abi code of the contract by clicking 
 
 ![Alt Text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.46.27.png)
 
-6. Navigate to third tab (`DEPLOY & RUN TRANSACTIONS`) in the left panel.
+**6.** Navigate to third tab (`DEPLOY & RUN TRANSACTIONS`) in the left panel.
 
 Select `Web3 Provider` option from the environment dropdown. A modal will show up to put RPC endpoint url for the blockchain node . You can put local block chain URL (http://127.0.0.1:8545) created using Ganache.
 
@@ -117,9 +117,9 @@ You can start seeing the default accounts given by Ganache.
 ![Alt text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.49.29.png)
 
 
-7. Click on `Deploy` to publish the smart contract in the block chain. You can see the deployed contracts at the bottom of the same panel. It is also possible to copy the contract address from the deployed contracts. 
+**7.** Click on `Deploy` to publish the smart contract in the block chain. You can see the deployed contracts at the bottom of the same panel. It is also possible to copy the contract address from the deployed contracts. 
 
-Copy the contract address and configure it in https://github.com/bring/ethbasiccontract/blob/master/src/Contants.js 
+  Copy the contract address and configure it in https://github.com/bring/ethbasiccontract/blob/master/src/Contants.js 
 
 ![Alt text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.52.17.png)
 
