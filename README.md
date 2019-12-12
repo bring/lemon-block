@@ -68,8 +68,16 @@ Remix is a online IDE which can be used to write , compile and deploy smart cont
   - Deploy & run transactions
   - Debugger
   - Solidity static analysis
+  
+  ![Alt Text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.40.37.png)
+  
+  After adding the plugin , it will look something like this 
+  
+  ![Alt Text] (https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.41.58.png)
    
 3. Open the File Explorer and create a new file `SimpleStorage`  
+
+
 
 4. Paste below Smart Contracts inside `SimpleStorage.sol`
     
