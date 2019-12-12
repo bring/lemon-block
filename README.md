@@ -21,10 +21,15 @@ This is basic smart contract interaction client developed in React.
 
   *Installation*
   
+  Open a new terminal in the command line and execute below comands 
+  
     npm install -g ganache-cli
     ganache-cli
   
-  It will start local blockchain instance at http://127.0.0.1:8545 
+  It will start local blockchain instance at http://127.0.0.1:8545 and you can start seeing the the default account details.
+  
+  Open Notepad and keep the account public and private keys over there
+  
   More configuration option can be found [here](https://www.npmjs.com/package/ganache-cli)
   
   Alternatively there is also one [GUI](https://www.trufflesuite.com/docs/ganache/quickstart) version available. 
@@ -96,7 +101,7 @@ More information on Remix can be found [here](https://remix-ide.readthedocs.io/)
  
 ```
  
- yarn build
+ yarn add packages 
  yarn start
  
 ```
