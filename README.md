@@ -154,7 +154,7 @@ The app only includes a frontend and we are directly communicating with the Ethe
 You should see something like this
 
 
-![Alt text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.52.17.png)
+![Alt text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2018.36.54.png)
 
 
 
