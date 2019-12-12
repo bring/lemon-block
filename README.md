@@ -98,7 +98,7 @@ Remix is a online IDE which can be used to write , compile and deploy smart cont
           }
         }
 ```
-**5. ** Doing `cmd + s ` in the editor will save the smart contract and compile it. 
+**5.** Doing `cmd + s ` in the editor will save the smart contract and compile it. 
 
 ![ALt Text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.45.14.png)
 
