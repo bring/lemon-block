@@ -42,9 +42,18 @@ Installation guidelines can be found [here](https://metamask.io/).
 
 After installation you will need configure , the test accounts in the wallet . 
 
-First switch to the network running on local on posrt 8545 from the Networks Dropdown. 
+*Step 1*: First switch to the network running on local on port 8545 from the Networks Dropdown. 
+![Alt Text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.24.47.png)
 
-Then click on the logo next to the network dropdown . This will give you details about the accounts you have configured in metmask for this network. You can choose `Import Account` or `Create Account` option to add accounts in the MetaMask wallet.
+*Step 2*:Then click on the logo next to the network dropdown . This will give you details about the accounts you have configured in metmask for this network. 
+
+![Alt Text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.26.35.png)
+
+*Step 3* You can choose `Import Account` to add accounts received from ganache in the MetaMask wallet.
+
+![Alt Text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.33.02.png)
+
+
 
 **Remix**
 
