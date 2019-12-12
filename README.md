@@ -80,6 +80,8 @@ You can start seeing the default accounts given by Ganache.
 
 Copy the contract address and configure it in https://github.com/bring/ethbasiccontract/blob/master/src/Contants.js 
 
+More information on Remix can be found [here](https://remix-ide.readthedocs.io/)
+
 
 
 
