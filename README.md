@@ -49,10 +49,10 @@ Remix is a online IDE which can be used to write , compile and deploy smart cont
 1. Open https://remix.ethereum.org/ in browser 
 2. Activate  below plugin's in the IDE
    
-   Solidity compiler
-   Deploy & run transactions
-   Debugger
-   Solidity static analysis
+  - Solidity compiler
+  - Deploy & run transactions
+  - Debugger
+  - Solidity static analysis
    
 3. Open the File Explorer and create a new file `SimpleStorage`  
 
