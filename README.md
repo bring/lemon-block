@@ -8,8 +8,10 @@ This is basic smart contract interaction client developed in React.
   
 ## Clone the repository 
 
+```
   git clone git@github.com:bring/ethbasiccontract.git
   cd ethbasiccontract
+ ```
 
 ## Basic Setup 
   
