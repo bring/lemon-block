@@ -119,7 +119,7 @@ You can start seeing the default accounts given by Ganache.
 
 **7.** Click on `Deploy` to publish the smart contract in the block chain. You can see the deployed contracts at the bottom of the same panel. It is also possible to copy the contract address from the deployed contracts. 
 
-  Copy the contract address and configure it in https://github.com/bring/ethbasiccontract/blob/master/src/Contants.js 
+  Copy the contract address and configure it in [Constants](https://github.com/bring/ethbasiccontract/blob/master/src/Contants.js) file in the repository
 
 ![Alt text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.52.17.png)
 
