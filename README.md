@@ -1,68 +1,128 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is basic smart contract interaction client developed in React. 
 
-## Available Scripts
+## Environment Requirements
 
-In the project directory, you can run:
+  - Npm 
+  - Node
+  - Yarn
+  
+## Clone the repository 
 
-### `yarn start`
+```
+  git clone git@github.com:bring/ethbasiccontract.git
+  cd ethbasiccontract
+ ```
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Basic Setup 
+  
+  **Ganache**
+  
+  Ganache is a fast and customizable blockchain emulator. It allows you to make calls to the blockchain without the overheads     of running an actual Ethereum node in local. On running on local , it gives you 10 account by default with 100 ethers each.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+  *Installation*
+  
+  Open a new terminal in the command line and execute below comands 
+  
+    npm install -g ganache-cli
+    ganache-cli
+  
+  It will start local blockchain instance at http://127.0.0.1:8545 and you can start seeing the the default account details.
+  
+  Take a note of account public and private addresses in a notepad
+  
+  More configuration option can be found [here](https://www.npmjs.com/package/ganache-cli)
+  
+  Alternatively there is also one [GUI](https://www.trufflesuite.com/docs/ganache/quickstart) version available. 
+  
+  **Metamask**
+  
+MetaMask is the easiest way to interact with dapps in a browser. It is an extension for Chrome or Firefox that connects to an Ethereum network without running a full node on the browser's machine. It can connect to the main Ethereum network, any of the testnets (Ropsten, Kovan, and Rinkeby), or a local blockchain such as the one created by Ganache.
 
-### `yarn test`
+Installation guidelines can be found [here](https://metamask.io/). 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+After installation you will need configure , the test accounts in the wallet . 
 
-### `yarn build`
+First switch to the network running on local on posrt 8545 from the Networks Dropdown. 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Then click on the logo next to the network dropdown . This will give you details about the accounts you have configured in metmask for this network. You can choose `Import Account` or `Create Account` option to add accounts in the MetaMask wallet.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+**Remix**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Remix is a online IDE which can be used to write , compile and deploy smart contracts. It will also  provides option to execute smart contract methods from the online IDE
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Open https://remix.ethereum.org/ in browser 
+2. Activate  below plugin's in the IDE
+   
+  - Solidity compiler
+  - Deploy & run transactions
+  - Debugger
+  - Solidity static analysis
+   
+3. Open the File Explorer and create a new file `SimpleStorage`  
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Paste below Smart Contracts inside `SimpleStorage.sol`
+    
+  ```
+        pragma solidity ^0.5.12;
+        contract SimpleStore {
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+          string value;
+          event NewValueAssigned(string value);
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+          function set(string memory _value) public {
+            value = _value;
+            emit NewValueAssigned(_value);
+          }
 
-## Learn More
+          function get()  public view returns (string memory) {
+            return value;
+          }
+        }
+```
+5.  Doing `cmd + s ` in the editor will save the smart contract and compile it. 
+Alternatively you can navigate to the second tab `SOLIDITY COMPILER` on the left panel to compile the contract. Make sure you choose the right compiler version based the the `pragma solidity` version defined in the smart contract. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+For this example it is `0.5.12`.  Copy the abi code of the contract by clicking on `ABI` option at the bottom of the panel and paste it in  https://github.com/bring/ethbasiccontract/blob/master/src/Contracts/SimpleStorage.json
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+6. Navigate to third tab (`DEPLOY & RUN TRANSACTIONS`) in the left panel.
 
-### Code Splitting
+Select `Web3 Provider` option from the environment dropdown. A modal will show up to put RPC endpoint url for the blockchain node . You can put local block chain URL (http://127.0.0.1:8545) created using Ganache.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+You can start seeing the default accounts given by Ganache. 
 
-### Analyzing the Bundle Size
+7. Click on `Deploy` to publish the smart contract in the block chain. You can see the deployed contracts at the bottom of the same panel. It is also possible to copy the contract address from the deployed contracts. 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Copy the contract address and configure it in https://github.com/bring/ethbasiccontract/blob/master/src/Contants.js 
 
-### Making a Progressive Web App
+More information on Remix can be found [here](https://remix-ide.readthedocs.io/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Running the app 
+ 
+```
+ 
+ yarn add packages 
+ yarn start
+ 
+```
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `yarn build` fails to minify
+  
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+  
+
+
+
+
+
+      
+      
+    
+    
+
+
+
