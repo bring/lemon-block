@@ -62,6 +62,7 @@ Remix is a online IDE which can be used to write , compile and deploy smart cont
 
 
 **1.** Open https://remix.ethereum.org/ in browser 
+
 **2.** Activate  below plugin's in the IDE
    
   - Solidity compiler
@@ -75,9 +76,11 @@ Remix is a online IDE which can be used to write , compile and deploy smart cont
   
   ![Alt Text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.41.58.png)
    
+
 **3.** Open the File Explorer and create a new file `SimpleStorage`  
 
 ![Alt Text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.43.51.png)
+
 
 **4.** Paste below Smart Contracts inside `SimpleStorage.sol`
     
@@ -98,6 +101,7 @@ Remix is a online IDE which can be used to write , compile and deploy smart cont
           }
         }
 ```
+
 **5.** Doing `cmd + s ` in the editor will save the smart contract and compile it. 
 
 ![ALt Text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.45.14.png)
@@ -112,7 +116,9 @@ Create New file Called "SimpleStorage.json" at the path "ethbasiccontract/src/Co
 
 **6** Copy Bytecode of the contract by clicking `Bytecode` option at the bottom of the panel. It will be copied in the clipboard.
 
-Create New file Called "SimpleStorageByteCode.json" at the path "ethbasiccontract/src/Contracts" in the repository and paste the copied bytecode inside it 
+Create New file Called "SimpleStorageByteCode.json" at the path "ethbasiccontract/src/Contracts" in the repository and paste the copied bytecode inside it
+
+![Alt Text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2018.28.55.png)
 
 
 
