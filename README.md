@@ -5,6 +5,11 @@ This is basic smart contract interaction client developed in React.
   - Npm 
   - Node
   - Yarn
+  
+## Clone the repository 
+
+  git clone git@github.com:bring/ethbasiccontract.git
+  cd ethbasiccontract
 
 ## Basic Setup 
   
@@ -83,9 +88,7 @@ Copy the contract address and configure it in https://github.com/bring/ethbasicc
 More information on Remix can be found [here](https://remix-ide.readthedocs.io/)
 
 ## Running the app 
-
-Navigate to the path where the app has been cloned then 
-
+ 
 ```
  
  yarn build
