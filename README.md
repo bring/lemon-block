@@ -126,9 +126,12 @@ You can start seeing the default accounts given by Ganache.
 More information on Remix can be found [here](https://remix-ide.readthedocs.io/)
 
 ## Running the app 
+
+The app only includes a frontend and we are directly communicating with the Ethereum blockchain from the frontend 
  
+
 ```
- 
+ cd ethbasiccontract
  yarn add packages 
  yarn start
  
