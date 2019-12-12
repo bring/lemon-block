@@ -28,7 +28,7 @@ This is basic smart contract interaction client developed in React.
   
   It will start local blockchain instance at http://127.0.0.1:8545 and you can start seeing the the default account details.
   
-  Open Notepad and keep the account public and private keys over there
+  Take a note of account public and private addresses in a notepad
   
   More configuration option can be found [here](https://www.npmjs.com/package/ganache-cli)
   
