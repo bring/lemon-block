@@ -40,7 +40,7 @@ MetaMask is the easiest way to interact with dapps in a browser. It is an extens
 
 Installation guidelines can be found [here](https://metamask.io/). 
 
-After installation you will need configure , the test accounts in the wallet . 
+After installation you will need create an wallet and configure the test accounts in the wallet . 
 
 **Step 1**: First switch to the network running on local on port 8545 from the Networks Dropdown. 
 ![Alt Text](https://github.com/bring/ethbasiccontract/blob/master/images/Screenshot%202019-12-12%20at%2012.24.47.png)
