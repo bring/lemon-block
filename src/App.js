@@ -36,7 +36,7 @@ function App() {
             })
     }
 
-    function getStateFromSmartContract() {
+    const getStateFromSmartContract = () => {
         let simpleStorageContract = new web3Reference.eth.Contract(SimpleStorageABI, selectedContractAddress)
         simpleStorageContract
             .methods
@@ -47,7 +47,7 @@ function App() {
             })
     }
 
-    function getUpdateHistory() {
+    const getUpdateHistory = () => {
         let simpleStorageContract = new web3Reference.eth.Contract(SimpleStorageABI, selectedContractAddress)
         simpleStorageContract
             .getPastEvents('NewValueAssigned', {
