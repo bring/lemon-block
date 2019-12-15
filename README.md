@@ -2,9 +2,8 @@ This is basic smart contract interaction client developed in React.
 
 ## Environment Requirements
 
-  - Npm 
   - Node
-  - Yarn
+  - Yarn/Npm 
   
 ## Clone the repository 
 
