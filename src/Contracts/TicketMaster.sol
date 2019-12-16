@@ -12,25 +12,18 @@ contract TicketMaster {
         State state;
     }
 
-
     int count = 0;
     mapping(int => Ticket) tickets;
 
     event NewTicket(int id, string eventName, int price, string owner);
 
     function sellTicket(string memory _eventName, int _price, string memory _owner) public {
-        /*
-                Ticket ticket = tickets[count++];
-                ticket.eventName = _eventName;
-                ticket.price = _price;
-                ticket.owner = _owner;
-                emit NewTicket(ticket);
-        */
+        int newId = count++;
+        tickets[newId] = Ticket(newId, _eventName, _price, _owner);
     }
 
     function getTickets() public view returns (int) {
-        return 1;
-        //return tickets[count];
+        return tickets[count];
     }
 
     function buyTicket(int id, string memory newOwner) public {
