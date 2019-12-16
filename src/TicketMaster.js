@@ -6,6 +6,7 @@ import TicketMasterByteCode from "./Contracts/TicketMasterByteCode"
 import {TICKET_MASTER_CONTRACT_ADDRESS} from "./Contants"
 
 function SimpleStorageApp() {
+    const [id, setId] = useState(null);
     const [eventName, setEventName] = useState(null);
     const [price, setPrice] = useState(null);
     const [owner, setOwner] = useState(null);
@@ -42,7 +43,7 @@ function SimpleStorageApp() {
         let contract = new web3Reference.eth.Contract(TicketMasterABI, selectedContractAddress)
         contract
             .methods
-            .getLastTicket()
+            .getTicketCount()
             .call()
             .then((data) => {
                 setValueFromSmartContract(data)
@@ -88,9 +89,7 @@ function SimpleStorageApp() {
         <div className="flexgrid mlm dib">
             { web3Reference !== null ? <div>
                 <div className={"tc"}><h3>Welcome to the Ticket Master App.</h3>
-                    <h6 className={"mlm"}>For this demonstration, We have created a basic smart contract that allow us
-                        to update state of a
-                        variable which is part of the smart contract and get state for the same </h6>
+                    <h6 className={"mlm"}> </h6>
                 </div>
                 <div style={{"marginLeft": "30rem"}} className={"mtl"}>
 
@@ -118,20 +117,16 @@ function SimpleStorageApp() {
                     <input className={"form__control w-20"} type={"text"} onChange={(e) => setOwner(e.target.value)}
                            required/>
                     <button disabled={eventName === null} className={"btn btn--green mlm"}
-                            onClick={() => sendToSmartContract()}> Set Value
+                            onClick={() => sendToSmartContract()}> Sell Ticket
                     </button>
-                    <span> (Initiate a Transaction towards block chain)</span>
-                    <br/>
-                    <button className={"btn btn--green mlm"} onClick={() => getStateFromSmartContract()}> Get Value
+                    <button className={"btn btn--green mlm"} onClick={() => getStateFromSmartContract()}> Total Tickets Booked
                     </button>
                     <span className={"mlm"}>{valueFromSmartContract}</span>
-                    <br/>
-                    <button className={"btn btn--green mlm"} onClick={() => getUpdateHistory()}> Show update history
-                    </button> (Retrieve Event history for a specific event "NewTicket")
-                    <br/>
 
+                    <button className={"btn btn--green mlm"} onClick={() => getUpdateHistory()}> Show Ticket history
+                    </button>
                     <button className={"btn btn--green mlm"} onClick={() => deployAnotherInstance()}> Create New Version
-                    </button> (Initiate a Transaction towards block chain)
+                    </button>
                     <br/>
                 </div>
 
