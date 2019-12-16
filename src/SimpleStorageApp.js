@@ -3,15 +3,15 @@ import './App.css';
 import getWeb3 from "./getWeb3";
 import SimpleStorageABI from "./Contracts/SimpleStorage"
 import SimpleStorageByteCode from "./Contracts/SimpleStorageByteCode"
-import {SIMPLE_STORAGE_CONTACT_ADDRESS} from "./Contants"
+import {SIMPLE_STORAGE_CONTRACT_ADDRESS} from "./Contants"
 
-function App() {
+function SimpleStorageApp() {
     const [value, setValue] = useState(null);
     const [valueFromSmartContract, setValueFromSmartContract] = useState(null);
     const [web3Reference, setWeb3Reference] = useState(null);
     const [accountAddress, setAccountAddress] = useState(null);
     const [updateHistory, setUpdateHistory] = useState([]);
-    const [deployedContractAddressList, setDeployedContractAddressList] = useState([SIMPLE_STORAGE_CONTACT_ADDRESS])
+    const [deployedContractAddressList, setDeployedContractAddressList] = useState([SIMPLE_STORAGE_CONTRACT_ADDRESS])
     const [selectedContractAddress, setSelectedContractAddress] = useState(deployedContractAddressList[0])
     const [successfulCreationOfContractMsg,setSuccessfulCreationOfContractMsg ] = useState(null)
 
@@ -161,4 +161,4 @@ function App() {
     );
 }
 
-export default App;
+export default SimpleStorageApp;
