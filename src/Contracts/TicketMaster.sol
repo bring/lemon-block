@@ -1,4 +1,4 @@
-pragma solidity ^0.5.12;
+pragma solidity ^0.5.14;
 
 contract TicketMaster {
 
@@ -9,7 +9,7 @@ contract TicketMaster {
         string eventName;
         int price;
         string owner; //TODO: Change type to address later (address of private account)
-        address ownerAddress;
+        address payable ownerAddress;
         State state;
     }
 
@@ -36,7 +36,9 @@ contract TicketMaster {
 
     function buyTicket(int id, string memory newOwner) public {
         // TODO validate transaction -> sufficient funds etc..
-        require(tickets[id].state == State.ForSale);
+        //require(tickets[id].state == State.ForSale);
+        tickets[id].ownerAddress.transfer(uint256(tickets[id].price));
+
         tickets[id].state = State.Sold;
         tickets[id].owner = newOwner;
         tickets[id].ownerAddress = msg.sender;
