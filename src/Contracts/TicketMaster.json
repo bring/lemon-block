@@ -1,5 +1,56 @@
 [
   {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "int256",
+        "name": "id",
+        "type": "int256"
+      },
+      {
+        "internalType": "string",
+        "name": "newOwner",
+        "type": "string"
+      }
+    ],
+    "name": "buyTicket",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_eventName",
+        "type": "string"
+      },
+      {
+        "internalType": "int256",
+        "name": "_price",
+        "type": "int256"
+      },
+      {
+        "internalType": "string",
+        "name": "_owner",
+        "type": "string"
+      }
+    ],
+    "name": "sellTicket",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
     "anonymous": false,
     "inputs": [
       {
@@ -31,29 +82,81 @@
     "type": "event"
   },
   {
-    "constant": false,
+    "anonymous": false,
     "inputs": [
       {
+        "indexed": false,
         "internalType": "int256",
         "name": "id",
         "type": "int256"
       },
       {
+        "indexed": false,
         "internalType": "string",
-        "name": "newOwner",
+        "name": "eventName",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "int256",
+        "name": "price",
+        "type": "int256"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "owner",
         "type": "string"
       }
     ],
-    "name": "buyTicket",
-    "outputs": [],
+    "name": "TicketSold",
+    "type": "event"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "internalType": "int256",
+        "name": "id",
+        "type": "int256"
+      }
+    ],
+    "name": "getTicket",
+    "outputs": [
+      {
+        "internalType": "int256",
+        "name": "",
+        "type": "int256"
+      },
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      },
+      {
+        "internalType": "int256",
+        "name": "",
+        "type": "int256"
+      },
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      },
+      {
+        "internalType": "enum TicketMaster.State",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
     "payable": false,
-    "stateMutability": "nonpayable",
+    "stateMutability": "view",
     "type": "function"
   },
   {
     "constant": true,
     "inputs": [],
-    "name": "getTickets",
+    "name": "getTicketCount",
     "outputs": [
       {
         "internalType": "int256",
@@ -63,31 +166,6 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "internalType": "string",
-        "name": "_eventName",
-        "type": "string"
-      },
-      {
-        "internalType": "int256",
-        "name": "_price",
-        "type": "int256"
-      },
-      {
-        "internalType": "string",
-        "name": "_owner",
-        "type": "string"
-      }
-    ],
-    "name": "sellTicket",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
     "type": "function"
   }
 ]
