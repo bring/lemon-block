@@ -1,0 +1,93 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "int256",
+        "name": "id",
+        "type": "int256"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "eventName",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "int256",
+        "name": "price",
+        "type": "int256"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "owner",
+        "type": "string"
+      }
+    ],
+    "name": "NewTicket",
+    "type": "event"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "int256",
+        "name": "id",
+        "type": "int256"
+      },
+      {
+        "internalType": "string",
+        "name": "newOwner",
+        "type": "string"
+      }
+    ],
+    "name": "buyTicket",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getTickets",
+    "outputs": [
+      {
+        "internalType": "int256",
+        "name": "",
+        "type": "int256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_eventName",
+        "type": "string"
+      },
+      {
+        "internalType": "int256",
+        "name": "_price",
+        "type": "int256"
+      },
+      {
+        "internalType": "string",
+        "name": "_owner",
+        "type": "string"
+      }
+    ],
+    "name": "sellTicket",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
