@@ -22,7 +22,7 @@ contract TicketMaster {
         tickets[newId] = Ticket(newId, _eventName, _price, _owner);
     }
 
-    function getTickets() public view returns (int) {
+    function getLastTicket() public view returns (Ticket) {
         return tickets[count];
     }
 
